@@ -8,7 +8,7 @@ def home():
     return "Hello, Flask!"
 
 
-@app.route("/user/<name>")
+@app.route("/user/<name>/")
 def user(name):
     return f"Hello, {name}!"
 
