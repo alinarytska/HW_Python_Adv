@@ -33,7 +33,7 @@ def process_user_json(json_data: str) -> str:
         user = User.model_validate_json(json_data, strict=True)
         return user.model_dump_json(indent=4)
     except ValidationError as error:
-        return f"Validation error:\n{error}"
+        return error.json()
 
 
 json_valid = """
